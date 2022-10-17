@@ -1,4 +1,4 @@
-# Git Compare
+# Git Compare [![CI Pipeline](https://github.com/msolimans/gitcomp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/msolimans/gitcomp/actions/workflows/docker-image.yml)
 
 Compare 2 git commits and prints out the difference between those commits
 
