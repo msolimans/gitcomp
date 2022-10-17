@@ -82,7 +82,8 @@ make test
 - In case there's a need to change test cases to real GitHub api calls, please let me know and I can adjust that accordingly.
 - Http Client returns standard httpClient, enhancement can be done by a simple wrapper within which we can add extra fields like timeouts, unified headers, user agents or logging raw request/response details.
 - Nothing mentioned logging that's why I simply used `fmt.Println`. I am pretty familiar with `zap` and `Logrus`
-
+- Requirments for Github actions were not clear enough, I enabled CI for `opened` or `reopened` PRs only however I can add `pushes` to `master` branch however direct pushes can be avoided/prevented from branch protection in repository settings.
 ### Enhancements
 
 - Add `goreleaser` to package
+- Docker build tag can be enhanced with `:date +%s`
