@@ -11,7 +11,7 @@ RUN go mod download
 
 COPY . /app
 # we can also use -mod=vendor instead if we don't want to download modules everytime we build 
-RUN go build -o gitcomp -ldflags "-X 'github.com/msolimans/gitcomp/pkg/build.Revision=$REVISION_NUM#$(date -u +%Y-%m-%d)' -X 'github.com/msolimans/gitcomp/pkg/build.Time=$(date)'" cmd/main.go
+RUN go build -o gitcomp -ldflags "-X 'github.com/msolimans/gitcomp/pkg/build.Revision=$REVISION_NUM' -X 'github.com/msolimans/gitcomp/pkg/build.Time=$(date)'" cmd/main.go
 # we can use even smaller image like `scratch` but it won't give access to shell 
 FROM alpine
 COPY --from=buildstg /app/gitcomp /gitcomp
