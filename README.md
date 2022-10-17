@@ -87,3 +87,4 @@ make test
 
 - Add `goreleaser` to package
 - Docker build tag can be enhanced with `:date +%s`
+- Builds and unit tests can be run in parallel with matrix strategy
