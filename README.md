@@ -71,7 +71,7 @@ make test
 |          |  --base   |    -b         | Base commit sha |  Y |
 
 ### Notes
-
+ 
 - `structs` were auto-generated using https://mholt.github.io/json-to-go/ and some of them were extended with a `simple` string overrides in `types_ext.go`.
 - I used `oath2.NewClient` to generate http client then passed that client inside `GitClient`. we can also pass the token via `Bearer Token` in `Authorization` header as documented here https://docs.github.com/en/rest/commits/commits#compare-two-commits
 
